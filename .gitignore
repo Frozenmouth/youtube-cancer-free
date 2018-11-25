@@ -31,3 +31,5 @@
 /config/master.key
 
 .env
+
+client_secret.json
