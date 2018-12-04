@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'google/apis'
 require 'google/apis/youtube_v3'
 
