@@ -71,9 +71,15 @@
 
     <div>
   <% @result.items.each do |video| %>
-    <div>
-      <%= video.snippet.title %>
-    </div>  
+      <div>
+        <%= video.snippet.channel_title %>
+      </div>  
+      <div>
+        <%= video.snippet.title %>
+      </div>  
+      <div>
+        
+      </div>
   <% end %>
 
         <!-- /.row -->
