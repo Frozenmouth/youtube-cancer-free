@@ -71,13 +71,13 @@
 
     <div>
   <% @result.items.each do |video| %>
-      <div>
-        <%= video.snippet.channel_title %>
+      <div id="channel_title">
+        <u><b><%= video.snippet.channel_title %></u></b>
       </div>  
-      <div>
-        <%= video.snippet.title %>
+      <div id="video_title">
+        <i><%= video.snippet.title %></i>
       </div>
-      <img src="<%= video.snippet.thumbnails.default.url %>" alt="<%= video.snippet.title %>" height="90" width="120">
+      <img src="<%= video.snippet.thumbnails.default.url %>" height="90" width="120">
   <% end %>
 
         <!-- /.row -->
