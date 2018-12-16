@@ -1,0 +1,13 @@
+inherit_from: .rubocop_todo.yml
+
+AllCops:
+  TargetRubyVersion: 2.5.1
+  Exclude:
+  - 'bin/*'
+  - 'db/schema.rb'
+  - 'node_modules/**/*'
+  - 'tmp/**/*'
+  - 'vendor/bundle/**/*'
+
+Metrics/LineLength:
+  Max: 150
