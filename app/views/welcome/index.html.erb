@@ -26,7 +26,7 @@
 
     <div style="margin:0 auto; padding:20px 0;">
   <% @result.items.each do |video| %>
-      <a href="https://www.youtube.com/feed/trending" target="_blank" style="color:black"><img src="<%= video.snippet.thumbnails.default.url %>" height="90" width="120">
+      <a href="https://www.youtube.com/watch?v=<%= video.id %>" target="_blank" style="color:black"><img src="<%= video.snippet.thumbnails.default.url %>" height="90" width="120">
 
       <div id="channel_title">
         <u><b><%= video.snippet.channel_title %></u></b>
@@ -43,13 +43,6 @@
 
     </div>
     <!-- /.container -->
-
-    <!-- jQuery Version 1.11.1 -->
-    <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-
 </body>
 
 </html>
