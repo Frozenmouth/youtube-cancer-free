@@ -69,3 +69,5 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 gem 'dotenv-rails', groups: %i[development test]
 
 gem 'google-api-client', '>0.7'
+
+gem 'omniauth-google-oauth2'
