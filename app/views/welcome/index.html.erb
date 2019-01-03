@@ -12,37 +12,24 @@
 
     <title>Youtube Cancer Free</title>
     <h1 style="text-align: center; ">Youtube Cancer Free</h1>
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-
 </head>
 
 <body>
+    <div class="container" style="margin:0 auto; padding:20px 0;">
+    <% @result.items.each do |video| %>
+        <a href="https://www.youtube.com/watch?v=<%= video.id %>" target="_blank" style="color:black;display:block">
+            <img src="<%= video.snippet.thumbnails.default.url %>" height="90" width="120">
 
+            <div id="channel_title">
+                <u><b><%= video.snippet.channel_title %></u></b>
+            </div>  
 
-    <!-- Page Content -->
-    <div class="container">
-
-    <div style="margin:0 auto; padding:20px 0;">
-  <% @result.items.each do |video| %>
-      <a href="https://www.youtube.com/watch?v=<%= video.id %>" target="_blank" style="color:black"><img src="<%= video.snippet.thumbnails.default.url %>" height="90" width="120">
-
-      <div id="channel_title">
-        <u><b><%= video.snippet.channel_title %></u></b>
-      </div>  
-
-      <div id="video_title" style="margin-bottom: 50px;">
-        <i><%= video.snippet.title %></i>
-      </div>
-
-      </a>
-  <% end %>
-
-        <!-- /.row -->
-
+            <div id="video_title" style="margin-bottom: 50px;">
+                <i><%= video.snippet.title %></i>
+            </div>
+        </a>
+    <% end %>
     </div>
-    <!-- /.container -->
 </body>
 
 </html>
