@@ -33,3 +33,6 @@
 .env
 
 client_secret.json
+
+.idea/
+.vscode/

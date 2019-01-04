@@ -1,3 +1,37 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+div#container {
+  margin:0 100px;
+  padding:20px 0;
+}
+
+div#container ol#videos-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+div#container ol#videos-list li.videos-list-item {
+  margin: 20px 0;
+}
+
+div#container ol#videos-list li.videos-list-item a.video-link {
+  display: block;
+  color: black;
+}
+
+div#container ol#videos-list li.videos-list-item a.video-link:hover {
+  text-decoration: none; 
+}
+
+div#container ol#videos-list li.videos-list-item a.video-link span.channel-title {
+  margin: 0 0 0 10px;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+div#container ol#videos-list li.videos-list-item a.video-link span.video-title {
+  margin: 0 0 0 5px;
+  font-style: italic;
+}

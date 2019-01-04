@@ -1,35 +1,13 @@
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Youtube Cancer Free</title>
-    <h1 style="text-align: center; ">Youtube Cancer Free</h1>
-</head>
-
-<body>
-    <div class="container" style="margin:0 auto; padding:20px 0;">
+<div id="container">
+    <ol id="videos-list">
     <% @result.items.each do |video| %>
-        <a href="https://www.youtube.com/watch?v=<%= video.id %>" target="_blank" style="color:black;display:block">
-            <img src="<%= video.snippet.thumbnails.default.url %>" height="90" width="120">
-
-            <div id="channel_title">
-                <u><b><%= video.snippet.channel_title %></u></b>
-            </div>  
-
-            <div id="video_title" style="margin-bottom: 50px;">
-                <i><%= video.snippet.title %></i>
-            </div>
-        </a>
+        <li class="videos-list-item">
+            <a class="video-link" href="https://www.youtube.com/watch?v=<%= video.id %>" target="_blank">
+                <img src="<%= video.snippet.thumbnails.default.url %>" height="90" width="120">
+                <span class="channel-title"><%= video.snippet.channel_title %></span>
+                <span class="video-title"><%= video.snippet.title %></span>
+            </a>
+        </li>
     <% end %>
-    </div>
-</body>
-
-</html>
+    </ol>
+</div>
