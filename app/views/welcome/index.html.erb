@@ -1,6 +1,6 @@
 <div id="container">
     <ol id="videos-list">
-    <% @result.items.each do |video| %>
+    <% @videos.each do |video| %>
         <li class="videos-list-item">
             <a class="video-link" href="https://www.youtube.com/watch?v=<%= video.id %>" target="_blank">
                 <img src="<%= video.snippet.thumbnails.default.url %>" height="90" width="120">
