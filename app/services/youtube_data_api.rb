@@ -8,7 +8,25 @@ class YoutubeDataApi
     'VINSKY',
     'Snapchat RED',
     'INCROYABLE MAIS VRAI',
-    'Topito'
+    'Topito',
+    'SkyrockFM',
+    'Ennahar tv',
+    'Troom Troom FR',
+    'Booska-P.com',
+    'Touche pas à mon poste !',
+    'Konbini',
+    'Foot Mercato',
+    'Marodi TV Sénégal',
+    'Jomali Pro',
+    'homme libre',
+    'Zap Télé Officiel',
+    'Téléfoot',
+    'ELBILAD TV',
+    'FlorianOnAir',
+    'sofiane adila',
+    'Okay.africa',
+    'To7Fa Tube',
+    'NumidiaTV'
   ].freeze
 
   def initialize

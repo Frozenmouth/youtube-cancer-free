@@ -70,3 +70,5 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 gem 'dotenv-rails'
 
 gem 'google-api-client', '>0.7'
+gem 'chosen-rails'
+gem 'country_select'
