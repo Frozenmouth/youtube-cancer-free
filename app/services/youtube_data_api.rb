@@ -8,7 +8,8 @@ class YoutubeDataApi
     'VINSKY',
     'Snapchat RED',
     'INCROYABLE MAIS VRAI',
-    'Topito'
+    'Topito',
+    'Cyprien'
   ].freeze
 
   def initialize
