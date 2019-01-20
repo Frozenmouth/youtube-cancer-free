@@ -1,3 +1,6 @@
+<%= form_tag do %>
+    <%= select_tag :country_id, options_for_select(@countries, @country_id), onchange: 'javascript: this.form.submit();' %>
+<% end %>
 <div id="container">
     <ol id="videos-list">
     <% @videos.each do |video| %>
