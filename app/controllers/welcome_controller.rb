@@ -3,11 +3,13 @@
 class WelcomeController < ApplicationController
   def index
     youtube_data_api = YoutubeDataApi.new
+    @country_id = params['country_id'] || 'US'
+    @countries = youtube_data_api.countries
 
     next_page_token = nil
     @videos = []
     loop do
-      response = youtube_data_api.trends('FR', 50, next_page_token)
+      response = youtube_data_api.trends(@country_id, 50, next_page_token)
       result, errors = response
       raise StandardError, errors.to_s unless errors.nil?
 
