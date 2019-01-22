@@ -70,3 +70,9 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 gem 'dotenv-rails'
 
 gem 'google-api-client', '>0.7'
+
+gem 'redis-rails'
+
+group :production do
+  gem 'redis-rack-cache'
+end
