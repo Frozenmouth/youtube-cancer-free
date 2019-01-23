@@ -31,7 +31,7 @@ sentinel_config = {
 
 config.cache_store = :redis_store, sentinel_config.merge(
   namespace: "cache",
-  expires_in: 1.days
+  expires_in: 1.day
 )
 config.session_store :redis_store, {
   servers: [
@@ -41,6 +41,8 @@ config.session_store :redis_store, {
   ],
   expire_after: 2.days
 }
+
+
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
