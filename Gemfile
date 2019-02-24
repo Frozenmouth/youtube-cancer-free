@@ -71,8 +71,5 @@ gem 'dotenv-rails'
 
 gem 'google-api-client', '>0.7'
 
-gem 'redis-rails'
-
-group :production do
-  gem 'redis-rack-cache'
-end
+gem 'redis'
+gem 'hiredis'
