@@ -22,8 +22,11 @@ class YoutubeDataApi
   end
 
   def countries
-    @client.list_i18n_regions('snippet', hl: 'en_US').items.map do |country|
-      [country.snippet.name, country.snippet.gl]
+    Rails.cache.fetch :countries, expires_in: 1.day do
+      Rails.logger.info 'Writing countries to cache'
+      @client.list_i18n_regions('snippet', hl: 'en_US').items.map do |country|
+        [country.snippet.name, country.snippet.gl]
+      end
     end
   end
 end

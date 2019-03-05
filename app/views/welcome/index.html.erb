@@ -1,6 +1,8 @@
 <%= form_tag do %>
     <%= select_tag :country_id, options_for_select(@countries, @country_id), onchange: 'javascript: this.form.submit();' %>
 <% end %>
+<% cache 'country_id', expires_in: Time.now.beginning_of_hour + 24.hours do %>
+<% end %>
 <div id="container">
     <ol id="videos-list">
     <% @videos.each do |video| %>
