@@ -73,3 +73,5 @@ gem 'google-api-client', '>0.7'
 
 gem 'redis'
 gem 'hiredis'
+gem "yard", ">= 0.9.20"
+gem "nokogiri", ">= 1.10.4"
